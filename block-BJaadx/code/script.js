@@ -1,4 +1,5 @@
 // 1. Change the title of the page to `Hello AltCampus!`
+document.title = "Hello AtlCampus!";
 
 // 2. Select the element using the children property:
 
@@ -7,29 +8,55 @@
 //    - Select the first `li` element inside the `ul` with class `topics` and change the innerText to `all about document`
 //    - Select the input element with name `email`
 
+document.body.children[0].innerHTML = "Learning DOM";
+
+document.querySelector(".topics").firstElementChild.innerHTML =
+  "all about document";
+
+document.querySelector("input[name='email']");
+
 // 3. Log the number (using console.log) of children of all the `li` element inside the ul with class `topics`
+let topicsLi = document.querySelector(".topics");
+
+console.log(topicsLi.children.length);
 
 // 4. Select the first input using the `type` selector and store them in variable named `emailInput`
+let emailInput = document.querySelector("input[type='email']");
 
 // 5. Select the ul element using class selector and store in `topics`
+let topics = document.querySelector(".topics");
 
 // 6. Select the first label element and store in `label`
+let label = document.querySelector("label");
 
 // 7. Select the input of type `checkbox` with the `id` selector and store in `inputCheckbox`
+let inputCheckbox = document.getElementById("remember");
 
 // 8. Select the input of type password using Attribute selectors. (eg: input[type="text"]) and store in `password`
+let password = document.querySelector("input[type='paswword']");
 
 // 9. Select the input using the placeholder attribute selector with value `password` and store in `attrPassword`
+let attrPassword = document.querySelector("input[placeholder='password']");
 
 // 10. Select all the `li` element and store in `allTopics`
+let allTopics = document.querySelectorAll("li");
 
 // 11. Select all the input element of any type and store in `allInput`
+let allInput = document.querySelectorAll("input[type='text']");
 
 // 12. Use forEach to console the `innerText` property of all the li element in `allTopics` variable.
+allTopics.forEach((value) => {
+  console.log(value.innerText);
+});
 
 // 13. Select all the elements with class `list` and store in variable `listOfSelectedTopics`
 
+let listOfSelectedTopics = document.querySelectorAll(".list");
+
 // 14. Select the first li element inside the `ul` element using `>` (direct child) and store in `firstLi`
+let firstLi = document.querySelector("ul>li");
+
+console.log(firstLi);
 
 // 15. Select all the img element and log the number of element saying `The total number of img element is ---`
 
